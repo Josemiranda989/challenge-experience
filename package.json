@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "npx nodemon app.js",
-    "first-step": "npm i && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "dev": "npx nodemon -q app.js",
+    "first-step-win": "copy .env.example .env && npm i && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
+    "first-step-unix": "cp .env.example .env && npm i && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "db:drop": "sequelize db:drop"
   },
   "keywords": [],
@@ -13,6 +14,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mysql2": "^3.14.1",
     "sequelize": "^6.37.7",
