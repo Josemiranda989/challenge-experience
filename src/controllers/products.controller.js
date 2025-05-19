@@ -8,7 +8,7 @@ module.exports = {
           include: [
             [
               Sequelize.literal(
-                `CONCAT('${process.env.URL_BASE}:${process.env.PORT}','/api/products/', Product.id)`
+                `CONCAT('${process.env.URL_BASE}:${process.env.NODE_DOCKER_PORT}','/api/products/', Product.id)`
               ),
               "detailUrl",
             ],
@@ -53,7 +53,7 @@ module.exports = {
           include: [
             [
               Sequelize.literal(
-                `CONCAT('${process.env.URL_BASE}:${process.env.PORT}','/api/products/', Product.id)`
+                `CONCAT('${process.env.URL_BASE}:${process.env.NODE_PORT}','/api/products/', Product.id)`
               ),
               "detailUrl",
             ],
