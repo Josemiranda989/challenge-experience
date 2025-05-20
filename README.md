@@ -11,6 +11,7 @@ Proyecto challenge_experience desarrollado con Node.js, Express y Sequelize. Est
 - Sequelize (ORM)
 - MySQL
 - dotenv
+- Docker
 
 ---
 
@@ -20,19 +21,45 @@ Proyecto challenge_experience desarrollado con Node.js, Express y Sequelize. Est
 
 - Node.js v18+
 - MySQL
+- Docker
+- Docker compose
 
-### Pasos
+### Pasos sin docker
 
-#### 🢟 Windows
-
+- Clonar repositorio
 ```bash
-npm run first-step-win
+git clone https://github.com/Josemiranda989/challenge-experience
 ```
 
-#### 🐧 Unix / Mac
+#### 🢟 para Windows
 
 ```bash
-npm run first-step-unix
+npm run first-step-win && npm start
+```
+
+#### 🐧 para Unix / Mac
+
+```bash
+npm run first-step-unix && npm start
+```
+
+### Pasos CON DOCKER
+
+- Clonar repositorio
+```bash
+git clone https://github.com/Josemiranda989/challenge-experience
+```
+
+#### 🢟 para Windows
+1- Correr comando para levantar las imagenes de node y mysql
+```bash
+docker-compose up -d mysqldb app
+```
+
+
+2- Correr comando para migrar db con seeders (solo por primera vez)
+```bash
+docker-compose run migrate  
 ```
 
 Este script:

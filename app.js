@@ -10,7 +10,7 @@ app.use("/", indexRouter);
 app.use("/api/products", prodRouter);
 app.use("/api/users", userRouter);
 
-const port = process.env.PORT || 4000;
+const port = process.env.NODE_PORT || 4000;
 
 app.listen(port, () => {
   console.log(`server running in http://localhost:${port}`);
